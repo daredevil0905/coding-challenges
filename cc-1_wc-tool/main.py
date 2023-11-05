@@ -15,7 +15,7 @@ def printResults(results):
 # let's call it ccwc (cc for Coding Challenges) that takes the command line option -c
 # and outputs the number of bytes in a file.
 
-def getBytes(paths: list) -> (list):
+def getBytes(paths: list) -> list:
   results, totalBytes = [], 0
   for path in paths:
     try:
@@ -34,7 +34,7 @@ def getBytes(paths: list) -> (list):
 # Step Two: In this step your goal is to support the command line option -l
 # that outputs the number of lines in a file.
 
-def getLines(paths: list) -> str:
+def getLines(paths: list) -> list:
   results, totalLines = [], 0
   for path in paths:
     try:
@@ -56,7 +56,7 @@ def getLines(paths: list) -> str:
 # Step Three: In this step your goal is to support the command line option -w
 # that outputs the number of words in a file.
 
-def getWords(paths: list) -> str:
+def getWords(paths: list) -> list:
   results, totalWords = [], 0
   for path in paths:
     try:
@@ -78,7 +78,7 @@ def getWords(paths: list) -> str:
 # Step Four: In this step your goal is to support the command line option -m
 # that outputs the number of characters in a file.
 
-def getCharacters(paths: list) -> str:
+def getCharacters(paths: list) -> list:
   results, totalCharacters = [], 0
   for path in paths:
     try:
@@ -98,7 +98,7 @@ def getCharacters(paths: list) -> str:
 # Step Five: In this step your goal is to support the default option - 
 # i.e. no options are provided, which is the equivalent to the -c, -l and -w options.
 
-def getAll(paths: list) -> str:
+def getAll(paths: list) -> list:
   results = []
   totalCount = [0, 0, 0]
   for path in paths:
@@ -117,7 +117,7 @@ def getAll(paths: list) -> str:
 
 if __name__ == "__main__":
 
-  cliInput = input('>')
+  cliInput = input('> ')
 
   if cliInput.startswith('ccwc'):
 
